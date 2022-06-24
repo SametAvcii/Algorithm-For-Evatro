@@ -36,6 +36,11 @@ func findFibonacci(n int) int { //finds the fibonacci value of the entered n val
 }
 
 func isPrime(n int) bool { // This func Checks the primality of the entered Fibonacci number
+
+	if n < 0 {
+		fmt.Println("Input must be larger than zero")
+		return false
+	}
 	control := true
 	for i := 2; i < n; i++ {
 		if n%2 == 0 {
